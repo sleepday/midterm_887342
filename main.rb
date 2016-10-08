@@ -41,7 +41,10 @@ end
     end
     }
     puts arr2
-
+    puts "=============================================="
+#point_six
+    US_states.sort! { |a,b| a[-1]<=>b[-1]}  
+    puts US_states
 
 
 
