@@ -23,19 +23,25 @@ def point_three
     
 end
 
-def point_four
-    arr =Array.new
+#point_four
+    arr1 = Array.new
     US_states = ["Alaska", "Alabama", "Arkansas", "American Samoa", "Arizona", "California", "Colorado", "Connecticut", "District of Columbia", "Delaware", "Florida", "Georgia", "Guam", "Hawaii", "Iowa", "Idaho", "Illinois", "Indiana", "Kansas", "Kentucky", "Louisiana", "Massachusetts", "Maryland", "Maine", "Michigan", "Minnesota", "Missouri", "Mississippi", "Montana", "North Carolina", "North Dakota", "Nebraska", "New Hampshire", "New Jersey", "New Mexico", "Nevada", "New York", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Puerto Rico", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Virginia", "Virgin Islands", "Vermont", "Washington", "Wisconsin", "West Virginia", "Wyoming"]
-    Us_states.count.times do|count|
-    index = count
-    if(Us_states(index).length>8)
-        arr.push(Us_states(index))
+    US_states.each {|state|
+    if(state.length>8)
+        arr1.push(state)
     end
+    }
+    puts arr1
+    puts "=============================================="
+#point_five
+    arr2 = Array.new
+    US_states.each {|state|
+    if((state.chr=="M"||state.chr=="N"||state.chr=="S")&&(state[-1]=="a"||state[-1]=="e"||state[-1]=="i"||state[-1]=="o"||state[-1]=="u"))
+        arr2.push(state)
     end
-    puts arr
-end
+    }
+    puts arr2
 
-point_four
 
 
 
